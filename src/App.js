@@ -13,7 +13,7 @@ function App() {
   });
 
   const [activeNote, setActiveNote] = useState(false);
-  const [showSidebar, setShowSidebar] = useState(true);
+  // const [showSidebar, setShowSidebar] = useState(true);
 
   useEffect(() => {
     localStorage.setItem("notes", JSON.stringify(notes));
@@ -43,7 +43,7 @@ function App() {
   };
 
   const onDeleteNote = (idToDelete) => {
-    if (window.confirm("Are you sure ?") == true) {
+    if (window.confirm("Are you sure ?") === true) {
       setNotes(notes.filter((note) => note.id !== idToDelete));
     }
   };
